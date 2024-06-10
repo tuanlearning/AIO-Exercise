@@ -1,2 +1,4 @@
 #Ignore environment folder
 env_aio_2024/
+#Ignore .ipynb files
+*.ipynb
