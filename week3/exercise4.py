@@ -1,10 +1,17 @@
 class Queue():
-    def __init__(self):
+    def __init__(self, capacity):
+        assert isinstance(capacity, int), "Capacity has to be an integer"
         self.queue = []
-    def isEmpty(self):
+        self.capacity = capacity
+    def is_empty(self):
         return len(self.queue) == 0
+    def is_full(self):
+        return len(self.queue) == self.capacity
     def enqueue(self, element):
-        self.queue.append(element)
+        if self.is_full():
+            print("Queue has already reached full capacity")
+        else:
+            self.queue.append(element)
     def dequeue(self):
         if self.isEmpty():
             raise IndexError('Pop from empty queue')
