@@ -1,10 +1,17 @@
 class Stack():
-    def __init__(self):
+    def __init__(self, capacity):
+        assert isinstance(capacity, int), "Capacity has to be an integer"
         self.stack = []
-    def isEmpty(self):
+        self.capacity = capacity
+    def is_empty(self):
         return len(self.stack) == 0
+    def is_full(self):
+        return len(self.stack) == self.capacity
     def push(self, element):
-        self.stack.append(element)
+        if self.is_full():
+            print("Stack already reached full capacity")
+        else:
+            self.stack.append(element)
     def pop(self):
         if self.isEmpty():
             raise IndexError('Pop from empty stack')
