@@ -3,8 +3,8 @@ import numpy as np
 from PIL import Image
 import streamlit as st
 
-MODEL = "model/MobileNetSSD_deploy.caffemodel"
-PROTOTXT = "model/MobileNetSSD_deploy.prototxt.txt"
+MODEL = "week4/model/MobileNetSSD_deploy.caffemodel"
+PROTOTXT = "week4/model/MobileNetSSD_deploy.prototxt.txt"
 
 def process_image(image):
     blob = cv2.dnn.blobFromImage(
