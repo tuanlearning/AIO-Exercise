@@ -1,0 +1,6 @@
+{
+    "sonarlint.connectedMode.project": {
+        "connectionId": "tuanlearning",
+        "projectKey": "tuanlearning_AIO-Exercise"
+    }
+}
